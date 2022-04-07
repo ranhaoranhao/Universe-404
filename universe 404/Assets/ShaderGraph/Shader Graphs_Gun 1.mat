@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_Gun 1
+  m_Shader: {fileID: -6465566751694194690, guid: 004d8c98a1c8df748b7c173de4eafb57,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_a04e727be8594286ac5eb41a9fd70d72: 100
+    - Vector1_b96daa33eecb447bb4ac8cdab16c813f: 30
+    m_Colors:
+    - Color_928bd20b630b4c1496413efa9b2463a0: {r: 2.1296391, g: 3.9487062, b: 8.47419,
+        a: 1}
+    - Vector2_5d5075043c474114985eb14bc43ac840: {r: 1.5, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

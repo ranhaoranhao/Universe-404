@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Floor
+  m_Shader: {fileID: -6465566751694194690, guid: 690cac844de4e194194e85a3f897d523,
+    type: 3}
+  m_ShaderKeywords: ENUM_2865D986800948688AA663173D166B57_A
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_68a15f9e4a444dd293ccc5bf5d3e1ebe:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8cd472f7db614cd19cacffe46584ef95:
+        m_Texture: {fileID: 2800000, guid: 6c3e5623c09004d4795a60d1079a5908, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9312223cb9864370871b182eedca42fe:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_f45e2c0dbd7145bead83e6c8810b2e32: 0
+    - ENUM_2865D986800948688AA663173D166B57: 0
+    - Vector1_21861797c81242999254ea7a8c6b123a: 0.05
+    - Vector1_4242ef84563843e1b041c6e984bb3bec: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
