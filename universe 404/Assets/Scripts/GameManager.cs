@@ -238,6 +238,12 @@ public class GameManager : MonoBehaviour
 
             var image = GameObject.FindGameObjectWithTag("TargetCanvas").GetComponent<Image>();
             image.sprite = TargetImages[CollectedShards.Count / 7];
+            //从2D来到3D时开启voluem；
+            PlayerController2D.isDead = true;
+        }
+        //从3D返回2D时关闭voluem；
+        if(scene.name == "2D" && PlayerController2D.isDead){
+            PlayerController2D.isDead = false;
         }
     }
 
