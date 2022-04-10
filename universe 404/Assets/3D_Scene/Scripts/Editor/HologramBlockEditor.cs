@@ -30,7 +30,6 @@ namespace UnityEditor.Rendering.Universal
         //    m_enableEffect = Unpack(o.Find(x => x.enableEffect));
         //    HologramBlock.en.value = false;
         //}
-
         public override void OnInspectorGUI()
         {
             EditorGUILayout.LabelField("全息效果及视频错误效果", EditorStyles.largeLabel);

@@ -31,23 +31,27 @@ public class HologramBlockRenderPass : ScriptableRenderPass
 
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
-        if (holoMat == null)
+        if (PlayerController2D.isDead)
         {
-            UnityEngine.Debug.LogError("材质没找到！"); 
-            return;
-        }
-        if (!renderingData.cameraData.postProcessEnabled) return;
-        //通过队列来找到HologramBlock组件，然后
-        var stack = VolumeManager.instance.stack;
-        hologramBlock = stack.GetComponent<HologramBlock>();
-        if (hologramBlock == null){return;}
-        if (!hologramBlock.IsActive())return;
+            if (holoMat == null)
+            {
+                UnityEngine.Debug.LogError("材质没找到！");
+                return;
+            }
+            if (!renderingData.cameraData.postProcessEnabled) return;
+            //通过队列来找到HologramBlock组件，然后
+            var stack = VolumeManager.instance.stack;
+            hologramBlock = stack.GetComponent<HologramBlock>();
+            if (hologramBlock == null) { return; }
+            if (!hologramBlock.IsActive()) return;
 
-        var cmd = CommandBufferPool.Get(k_RenderTag);
-        //UnityEngine.Debug.LogError("Execute渲染中！");
-        Render(cmd, ref renderingData);
-        context.ExecuteCommandBuffer(cmd);
-        CommandBufferPool.Release(cmd);        
+            var cmd = CommandBufferPool.Get(k_RenderTag);
+            //UnityEngine.Debug.LogError("Execute渲染中！");
+            Render(cmd, ref renderingData);
+            context.ExecuteCommandBuffer(cmd);
+            CommandBufferPool.Release(cmd);
+        }
+
     }
 
     void Render(CommandBuffer cmd,ref RenderingData renderingData)

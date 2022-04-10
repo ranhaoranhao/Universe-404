@@ -12,6 +12,7 @@ public class HologramJitter : MonoBehaviour
     [SerializeField]
     float _glitchSpeed = 2;
     Material mat;
+    private float currentVelocity = 0f;
     void Start()
     {
         //mat = new Material(Shader.Find("Custom/HologramBlock"));
@@ -25,5 +26,10 @@ public class HologramJitter : MonoBehaviour
         var cd = new Vector2(_colorDrift * 0.04f, Time.time * 606.11f);
         mat.SetVector("_Params", new Vector4(sl_disp, sl_thresh, cd.x,cd.y));
         mat.SetFloat("_Speed", _glitchSpeed);
+
+      
+     
+        
     }
+
 }

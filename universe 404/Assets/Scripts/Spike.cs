@@ -7,6 +7,10 @@ using UnityEngine;
 /// </summary>
 public class Spike : MonoBehaviour
 {
+    private void Update()
+    {
+        StartCoroutine(load());   
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var characterLife = collision.gameObject.GetComponent<CharacterLife>();
@@ -14,5 +18,9 @@ public class Spike : MonoBehaviour
         {
             characterLife.Hit(gameObject);
         }
+    }
+    IEnumerator load()
+    {
+        yield return new WaitForSeconds(2);
     }
 }

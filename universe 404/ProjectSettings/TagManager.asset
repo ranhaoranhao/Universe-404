@@ -14,6 +14,8 @@ TagManager:
   - AI
   - Flowchart_Enter3D
   - Checkpoint
+  - disappear
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Water
   - UI
   - post-process
-  - 
+  - Hit
   - Player
   - Obstacle
   - 

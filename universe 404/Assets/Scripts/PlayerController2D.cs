@@ -1,5 +1,8 @@
 using UnityEngine;
 using Fungus;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 public class PlayerController2D : MonoBehaviour
 {
@@ -25,10 +28,11 @@ public class PlayerController2D : MonoBehaviour
 
 	public static bool canFlow;
 
-	private void Start()
-    {
-		
-	}
+	public GameObject Enmey_1;
+
+	public static  bool isDead;
+
+
     private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -48,7 +52,6 @@ public class PlayerController2D : MonoBehaviour
 				m_Grounded = true;
 		}
 
-		
 
 	}
 	public void Move(float move, bool crouch, bool jump)
@@ -116,11 +119,10 @@ public class PlayerController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(Vector2.up * 40f);
 		}
 
-		if (collision.gameObject.name == "EnmeyHit")
+		if (collision.gameObject.name == "AirShipHit")
 		{
-			anim_enemyHit1.SetBool("canRun", true);
+			m_Rigidbody2D.velocity = Vector2.left * 10f;
 		}
-     
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -130,8 +132,34 @@ public class PlayerController2D : MonoBehaviour
 			anim_elevater.SetBool("canMove", true);
 		}
 		else
-        {
+		{
 			anim_elevater.SetBool("canMove", false);
 		}
+
+
+		if (collision.gameObject.name == "EnmeyHit")
+
+		{
+			anim_enemyHit1.SetBool("canRun", true);
+		}
+
+		if (collision.gameObject.name == "EnmeyHit" && Enmey_1.transform.position.x <= 111.5)
+		{
+			anim_enemyHit1.SetBool("canRun", true);
+			CameraShake.Instance.canShake(0.08f, 0.8f);
+		}
+
+		if(collision.gameObject.tag == "disappear")
+        {
+			collision.gameObject.SetActive(false);
+        }
+
+		if (collision.gameObject.tag == "Enemy")
+		{
+			isDead = true;
+			
+		}
 	}
+	
+ 
 }

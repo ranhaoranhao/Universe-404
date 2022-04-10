@@ -109,9 +109,10 @@ GameObject:
   - component: {fileID: 4016151322621830871}
   - component: {fileID: 4016151322621830872}
   - component: {fileID: 4016151322621830868}
+  - component: {fileID: 1470449477}
   m_Layer: 0
   m_Name: Checkpoint
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +126,7 @@ Transform:
   m_GameObject: {fileID: 4016151322621830873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.82, y: -19.1, z: 0}
-  m_LocalScale: {x: 0.77461, y: 0.48637563, z: 1}
+  m_LocalScale: {x: 1.6528475, y: 1.0657959, z: 2.191302}
   m_Children:
   - {fileID: 894968269407558458}
   - {fileID: 7948644115162497067}
@@ -151,7 +152,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.050492108, y: 0.30342567}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.366067, y: 1.9396408}
   m_EdgeRadius: 0
 --- !u!114 &4016151322621830868
 MonoBehaviour:
@@ -233,7 +234,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff299bbcb34a9a42be73c2ead34c6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: Checkpoint_61a35d36-8caa-4a51-9f3c-e908d1fd74be
+  uniqueId: 2D_44c0b7f2-2f63-459e-8b42-e93b752e0bbe
+--- !u!95 &1470449477
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016151322621830873}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7bec12447670f1b418581f3274e62dfb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5681671729663865256
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +304,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
