@@ -238,7 +238,13 @@ public class GameManager : MonoBehaviour
 
             var image = GameObject.FindGameObjectWithTag("TargetCanvas").GetComponent<Image>();
             image.sprite = TargetImages[CollectedShards.Count / 7];
+            PlayerController2D.isDead = true;
         }
+         if (scene.name == "2D" && PlayerController2D.isDead)
+            {
+            PlayerController2D.isDead = false;
+            Debug.Log("111");
+            }
     }
 
     private void OnSceneUnloaded(Scene scene)
