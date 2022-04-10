@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
     public string LastCheckpoint = "";
 
     /// <summary>
+    /// 离开 2D 空间时的位置
+    /// </summary>
+    public Vector3 Last2DPosition;
+
+    /// <summary>
     /// 所有已经收集的碎片，包括已经用掉的
     /// </summary>
     public List<string> CollectedShards;
@@ -79,6 +84,7 @@ public class GameManager : MonoBehaviour
  
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+        // SceneManager.sceneUnloaded += OnSceneUnloaded;
         BlockSignals.OnBlockEnd += OnBlockEnd;
 
 
@@ -89,9 +95,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var scene_name = SceneManager.GetActiveScene().name;
         // 3D 场景下，30秒倒计时后激活传送对话
-        if (!_transitionBegan && SceneManager.GetActiveScene().name == "3D")
+        if (!_transitionBegan && scene_name == "3D")
         {
             _timeLeft -= Time.deltaTime;
             if (_timeLeft <= 0)
@@ -102,6 +108,9 @@ public class GameManager : MonoBehaviour
                 _transitionBegan = true;
             }
             _textTimer.text = "Time: " + Math.Round(_timeLeft, 1);
+        } else if (scene_name == "2D" && Player != null)
+        {
+            Last2DPosition = Player.transform.position;
         }
 
     } 
@@ -182,7 +191,26 @@ public class GameManager : MonoBehaviour
             // 2D 场景
             Player = GameObject.FindGameObjectWithTag("Player");
             _textShard = GameObject.Find("Text_Shard").GetComponent<Text>();
-            if (LastCheckpoint != null)
+
+            // 还原碎片和对话进度
+            foreach (Shard shard in FindObjectsOfType<Shard>())
+            {
+                if (CollectedShards.Contains(shard.GetComponent<UniqueId>().uniqueId))
+                    shard.SetCollected(true);
+            }
+            foreach (var flowchart in FindObjectsOfType<Flowchart>())
+            {
+                var uniqueId = flowchart.GetComponent<UniqueId>();
+                if (uniqueId != null && TriggeredFlowcharts.Contains(uniqueId.uniqueId))
+                    Destroy(flowchart.gameObject);
+            }
+
+            // 还原玩家位置
+            if (Last2DPosition != null && Last2DPosition != Vector3.zero)
+            {
+                Player.transform.position = Last2DPosition;
+                Last2DPosition = Vector3.zero;
+            } else if (LastCheckpoint != null)
             {
                 foreach (Checkpoint cp in FindObjectsOfType<Checkpoint>())
                 {
@@ -193,19 +221,6 @@ public class GameManager : MonoBehaviour
                     }
 
                 }
-            }
-
-            foreach (Shard shard in FindObjectsOfType<Shard>())
-            {
-                if (CollectedShards.Contains(shard.GetComponent<UniqueId>().uniqueId))
-                    shard.SetCollected(true); 
-            }
-
-            foreach (var flowchart in FindObjectsOfType<Flowchart>())
-            {
-                var uniqueId = flowchart.GetComponent<UniqueId>();
-                if (uniqueId != null && TriggeredFlowcharts.Contains(uniqueId.uniqueId))
-                    Destroy(flowchart.gameObject);
             }
 
             if (isOver_start)
@@ -232,6 +247,11 @@ public class GameManager : MonoBehaviour
             var image = GameObject.FindGameObjectWithTag("TargetCanvas").GetComponent<Image>();
             image.sprite = TargetImages[CollectedShards.Count / 7];
         }
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+
     }
 
     void OnBlockEnd(Block block)
