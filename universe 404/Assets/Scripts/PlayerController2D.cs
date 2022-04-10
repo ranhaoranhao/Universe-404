@@ -159,6 +159,11 @@ public class PlayerController2D : MonoBehaviour
 			isDead = true;
 			
 		}
+
+		if(collision.gameObject.name == "Flowchart_111")
+        {
+			GameManager.instance.isOver_111 = true;
+        }
 	}
 	
  

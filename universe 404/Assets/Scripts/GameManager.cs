@@ -223,14 +223,6 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (isOver_start)
-            {
-                GameObject.Find("Flowchart_start").SetActive(false);
-            }
-            if (isOver_switch)
-            {
-                GameObject.Find("Flowchart_switch").SetActive(false);
-            }
             if (isOver_111)
             {
                 GameObject.Find("Flowchart_111").SetActive(false);

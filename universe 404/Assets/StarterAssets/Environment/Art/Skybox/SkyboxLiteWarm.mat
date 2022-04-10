@@ -74,12 +74,12 @@ Material:
     - _SrcBlend: 1
     - _SunDisk: 2
     - _SunSize: 0.05
-    - _SunSizeConvergence: 3.5
+    - _SunSizeConvergence: 3.14
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GroundColor: {r: 0.08627451, g: 0.08235294, b: 0.08235294, a: 1}
+    - _GroundColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     - _SkyTint: {r: 0.8820755, g: 1, b: 0.9987828, a: 1}
   m_BuildTextureStacks: []
