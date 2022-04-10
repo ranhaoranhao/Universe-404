@@ -25,6 +25,8 @@ public class PlayerController2D : MonoBehaviour
 	public Animator anim;
 	public Animator anim_elevater;
 	public Animator anim_enemyHit1;
+	public Animator anim_break;
+
 
 	public static bool canFlow;
 
@@ -158,6 +160,11 @@ public class PlayerController2D : MonoBehaviour
 		{
 			isDead = true;
 			
+		}
+
+		if(collision.gameObject.name == "Break")
+        {
+			anim_break.SetBool("canBreak", true);
 		}
 
 		if(collision.gameObject.name == "Flowchart_111")
