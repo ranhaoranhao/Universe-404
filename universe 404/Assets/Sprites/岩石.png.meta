@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 2662dff64761cfa48a76d09ea07a9acd
+guid: d52edcaf91ec2044bb28cdf0500c4777
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6210046937902454133
+    second: "\u5CA9\u77F3_0"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "gamejam-\u7535\u68AF\u788E\u88C2_0"
+      name: "\u5CA9\u77F3_0"
       rect:
         serializedVersion: 2
-        x: 27
-        y: 16
-        width: 64
-        height: 32
+        x: 443
+        y: 700
+        width: 40
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,92 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f19b9801de4b49320800000000000000
-      internalID: 2563873018158364959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "gamejam-\u7535\u68AF\u788E\u88C2_2"
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 17
-        width: 64
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0c91b67ac6653590800000000000000
-      internalID: -7695131368531846129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "gamejam-\u7535\u68AF\u788E\u88C2_3"
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 15
-        width: 63
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9f36ced07facf100800000000000000
-      internalID: 143182187477745567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "gamejam-\u7535\u68AF\u788E\u88C2_5"
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 12
-        width: 64
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4283d2867551892c0800000000000000
-      internalID: -4424763168737380316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "gamejam-\u7535\u68AF\u788E\u88C2_6"
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 11
-        width: 64
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24bea2675187062f0800000000000000
-      internalID: -981652685194597566
+      spriteID: 5759d2ca9c48e2650800000000000000
+      internalID: 6210046937902454133
       vertices: []
       indices: 
       edges: []

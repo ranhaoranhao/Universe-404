@@ -26,16 +26,17 @@ public class PlayerController2D : MonoBehaviour
 	public Animator anim_elevater;
 	public Animator anim_enemyHit1;
 	public Animator anim_break;
-
+	public Animator anim_Fall;
 
 	public static bool canFlow;
 
 	public GameObject Enmey_1;
 
 	public static  bool isDead;
+	public static bool isFall;
 
 
-    private void Awake()
+	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
@@ -125,6 +126,17 @@ public class PlayerController2D : MonoBehaviour
 		{
 			m_Rigidbody2D.velocity = Vector2.left * 10f;
 		}
+
+		if (collision.gameObject.name == "Break_1")
+		{
+			anim_break.SetBool("canBreak", true);
+		}
+		else
+        {
+			anim_break.SetBool("canBreak", false);
+		}
+
+		
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -133,11 +145,10 @@ public class PlayerController2D : MonoBehaviour
 		{
 			anim_elevater.SetBool("canMove", true);
 		}
-		else
-		{
+        else
+        {
 			anim_elevater.SetBool("canMove", false);
 		}
-
 
 		if (collision.gameObject.name == "EnmeyHit")
 
@@ -162,16 +173,32 @@ public class PlayerController2D : MonoBehaviour
 			
 		}
 
-		if(collision.gameObject.name == "Break")
-        {
-			anim_break.SetBool("canBreak", true);
-		}
+		
 
-		if(collision.gameObject.name == "Flowchart_111")
+		if (collision.gameObject.name == "Flowchart_111")
         {
 			GameManager.instance.isOver_111 = true;
         }
+
+		if(collision.gameObject.name == "FallHit")
+        {
+			isFall = true;
+			anim_Fall.SetBool("canFall", true);
+
+		}
 	}
-	
- 
+
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+
+		if (collision.gameObject.name == "Break_1")
+		{
+			anim_break.SetBool("canBreak", true);
+		}
+		else
+		{
+			anim_break.SetBool("canBreak", false);
+		}
+
+	}
 }
