@@ -36,7 +36,12 @@ public class Ray : MonoBehaviour
                 computeOutline.SetActive(false);
                 pickup.SetActive(false);
             }
-           
+
+
+            if (hit.transform.name == "computer" && Input.GetKey(KeyCode.E ))
+            {
+                Destroy(GameObject.Find("computer"));
+            }
         }
         
     }

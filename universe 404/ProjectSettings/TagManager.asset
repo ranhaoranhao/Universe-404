@@ -27,7 +27,7 @@ TagManager:
   - Hit
   - Player
   - Obstacle
-  - 
+  - Ground
   - 
   - 
   - 
@@ -50,9 +50,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Background
     uniqueID: 1611635347
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: mediumGround
+    uniqueID: 2169687371
+    locked: 0
+  - name: Ground
+    uniqueID: 1376605201
+    locked: 0
+  - name: item
+    uniqueID: 4120072265
+    locked: 0
+  - name: Player
+    uniqueID: 2444957817
+    locked: 0
+  - name: foreground
+    uniqueID: 1288082665
     locked: 0
