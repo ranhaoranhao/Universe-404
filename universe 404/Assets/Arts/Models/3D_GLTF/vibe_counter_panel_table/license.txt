@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vibe Counter Panel Table
+* source:	https://sketchfab.com/3d-models/vibe-counter-panel-table-e2c1d02da8db4fa58de8f0c3565881e4
+* author:	JasonL (https://sketchfab.com/mauri.schnyder)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vibe Counter Panel Table" (https://sketchfab.com/3d-models/vibe-counter-panel-table-e2c1d02da8db4fa58de8f0c3565881e4) by JasonL (https://sketchfab.com/mauri.schnyder) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

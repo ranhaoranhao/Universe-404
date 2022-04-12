@@ -1,0 +1,11 @@
+Model Information:
+* title:	A painting about Goat
+* source:	https://sketchfab.com/3d-models/a-painting-about-goat-95153de357b24a179304550189a6094e
+* author:	rz (https://sketchfab.com/rz)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A painting about Goat" (https://sketchfab.com/3d-models/a-painting-about-goat-95153de357b24a179304550189a6094e) by rz (https://sketchfab.com/rz) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Eagle oil painting by Markus Franz
+* source:	https://sketchfab.com/3d-models/eagle-oil-painting-by-markus-franz-956b7e85fa704012806ddd9c83cb58fc
+* author:	thmsvdberg (https://sketchfab.com/thmsvdberg)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Eagle oil painting by Markus Franz" (https://sketchfab.com/3d-models/eagle-oil-painting-by-markus-franz-956b7e85fa704012806ddd9c83cb58fc) by thmsvdberg (https://sketchfab.com/thmsvdberg) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

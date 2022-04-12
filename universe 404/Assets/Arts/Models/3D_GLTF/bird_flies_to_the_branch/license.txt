@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bird flies to the branch
+* source:	https://sketchfab.com/3d-models/bird-flies-to-the-branch-62bac3dd2cb243b9a883fd0270956878
+* author:	Guido Salimbeni (https://sketchfab.com/3dsmithery)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bird flies to the branch" (https://sketchfab.com/3d-models/bird-flies-to-the-branch-62bac3dd2cb243b9a883fd0270956878) by Guido Salimbeni (https://sketchfab.com/3dsmithery) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

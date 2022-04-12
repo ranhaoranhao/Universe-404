@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wardrobe
+* source:	https://sketchfab.com/3d-models/wardrobe-10e3fc7ae89c4ff0971defb5ff4e4733
+* author:	mkaan (https://sketchfab.com/mkaan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wardrobe" (https://sketchfab.com/3d-models/wardrobe-10e3fc7ae89c4ff0971defb5ff4e4733) by mkaan (https://sketchfab.com/mkaan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

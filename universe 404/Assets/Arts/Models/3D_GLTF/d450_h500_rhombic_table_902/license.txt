@@ -1,0 +1,11 @@
+Model Information:
+* title:	D450_H500_RHOMBIC_TABLE_902
+* source:	https://sketchfab.com/3d-models/d450-h500-rhombic-table-902-00b5ceea7b1a45b4bc09b34b8c4b51dd
+* author:	#RHOMBIC (https://sketchfab.com/anton.becker.web)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "D450_H500_RHOMBIC_TABLE_902" (https://sketchfab.com/3d-models/d450-h500-rhombic-table-902-00b5ceea7b1a45b4bc09b34b8c4b51dd) by #RHOMBIC (https://sketchfab.com/anton.becker.web) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jacket Gray Painting
+* source:	https://sketchfab.com/3d-models/jacket-gray-painting-ce05ebc8c620433887e4b864bcf5f577
+* author:	Guido Salimbeni (https://sketchfab.com/3dsmithery)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jacket Gray Painting" (https://sketchfab.com/3d-models/jacket-gray-painting-ce05ebc8c620433887e4b864bcf5f577) by Guido Salimbeni (https://sketchfab.com/3dsmithery) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

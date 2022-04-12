@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ergonomic mesh office chair
+* source:	https://sketchfab.com/3d-models/ergonomic-mesh-office-chair-cd5ef0305d8545dd8cd934ebb99cf7d5
+* author:	guillaumecrz (https://sketchfab.com/guillaumecrz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ergonomic mesh office chair" (https://sketchfab.com/3d-models/ergonomic-mesh-office-chair-cd5ef0305d8545dd8cd934ebb99cf7d5) by guillaumecrz (https://sketchfab.com/guillaumecrz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
