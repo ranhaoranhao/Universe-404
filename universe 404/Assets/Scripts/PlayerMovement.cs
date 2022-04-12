@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-		if (Input.GetKeyDown(KeyCode.Space) && GameManager.instance.canJump)
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			jump = true;
 			anim.SetBool("isJump", true);
