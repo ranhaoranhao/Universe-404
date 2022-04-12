@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player;
     public GameObject myCanvas;
-
+    public GameObject Flowchart_Enter3D;
+   
     /// <summary>
     /// 3D 场景中，找到目标的时间限制
     /// </summary>
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
     {
         CollectedShards = new List<String>();
         TriggeredFlowcharts = new List<String>();
+
     }
 
     private void Awake()
@@ -85,7 +87,10 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(myCanvas);
- 
+        DontDestroyOnLoad(Flowchart_Enter3D);
+
+
+
 
         SceneManager.sceneLoaded += OnSceneLoaded;
         // SceneManager.sceneUnloaded += OnSceneUnloaded;
@@ -121,7 +126,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(GameObject.Find("computer"));
             GameManager.instance.canJump = true;
-            
         }
       
     } 
@@ -155,6 +159,9 @@ public class GameManager : MonoBehaviour
         }
 
         _textShard.text = " " + ShardCount;
+
+        FlowChartSwitch(CollectedShards.Count);
+        
     }
 
     public void SetCanMoveToTrue()
@@ -191,9 +198,9 @@ public class GameManager : MonoBehaviour
         var comp = flowchartGameObject.GetComponent<Flowchart>();
         comp.SetIntegerVariable("TotalShardCount", a);
         comp.ExecuteBlock("Start");
-    }
-   
 
+    }
+  
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
