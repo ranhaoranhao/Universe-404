@@ -60,10 +60,6 @@ public class GameManager : MonoBehaviour
     public bool isOver_switch;
     public bool isOver_111;
 
-    /// <summary>
-    /// 拾取物体后的效果
-    /// </summary>
-    public bool canJump;
     public Flowchart flowchart_111;
     private void Start()
     {
@@ -101,10 +97,10 @@ public class GameManager : MonoBehaviour
     {
         var scene_name = SceneManager.GetActiveScene().name;
         // 3D 场景下，30秒倒计时后激活传送对话
-        if (!_transitionBegan && scene_name == "3D" )
+        if (!_transitionBegan && scene_name == "3D")
         {
             _timeLeft -= Time.deltaTime;
-            if (_timeLeft <= 0 )
+            if (_timeLeft <= 0)
             {
                 Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("Flowchart_Timeout").GetComponent<Flowchart>().ExecuteBlock("Start");
@@ -116,14 +112,7 @@ public class GameManager : MonoBehaviour
         {
             Last2DPosition = Player.transform.position;
         }
-        //物品收集
-        if (Ray.isComputer)
-        {
-            Destroy(GameObject.Find("computer"));
-            GameManager.instance.canJump = true;
-            
-        }
-      
+
     } 
    
 
