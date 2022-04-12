@@ -9,16 +9,20 @@ public class Ray : MonoBehaviour
 
     public GameObject computeOutline;
     public GameObject pickup;
+    public bool canPick;
+
+    public static bool isComputer;
     //屏幕参考点的位置
     Vector3 pos = new Vector3(Screen.width / 2.0f, Screen.height / 2.0f);
     // Start is called before the first frame update
     void Start()
     {
-        
+        canPick = true;
+        DontDestroyOnLoad(GameObject.Find("computer"));
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //生成射线
         ray = Camera.main.ScreenPointToRay(pos);
@@ -26,7 +30,7 @@ public class Ray : MonoBehaviour
         if(Physics.Raycast(ray,out hit, 10.0f))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red);
-            if(hit.transform.name == "computer")
+            if(hit.transform.name == "computer" && canPick)
             {
                 computeOutline.SetActive(true);
                 pickup.SetActive(true);
@@ -40,7 +44,12 @@ public class Ray : MonoBehaviour
 
             if (hit.transform.name == "computer" && Input.GetKey(KeyCode.E ))
             {
-                Destroy(GameObject.Find("computer"));
+                isComputer = true;
+                canPick = false;
+            }
+            else
+            {
+                isComputer = false;
             }
         }
         
