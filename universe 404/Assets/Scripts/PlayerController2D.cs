@@ -25,6 +25,7 @@ public class PlayerController2D : MonoBehaviour
 	public Animator anim;
 	public Animator anim_elevater;
 	public Animator anim_enemyHit1;
+	public Animator anim_enemyHitTank;
 	public Animator anim_break;
 	public Animator anim_Fall;
 
@@ -114,6 +115,10 @@ public class PlayerController2D : MonoBehaviour
 		{
 			anim_enemyHit1.SetBool("canRun", false);
 		}
+		if (collision.gameObject.name == "EnmeyHit_tank")
+		{
+			anim_enemyHitTank.SetBool("canRun", false);
+		}
 	}
 	private void OnTriggerStay2D(Collider2D collision)
     {
@@ -155,6 +160,10 @@ public class PlayerController2D : MonoBehaviour
 		{
 			anim_enemyHit1.SetBool("canRun", true);
 		}
+		if (collision.gameObject.name == "EnmeyHit_tank")
+		{
+			anim_enemyHitTank.SetBool("canRun", true);
+		}
 
 		if (collision.gameObject.name == "EnmeyHit" && Enmey_1.transform.position.x <= 111.5)
 		{
@@ -174,7 +183,7 @@ public class PlayerController2D : MonoBehaviour
 		}
 
 		
-		//
+		//ÔÚÕâÀï£¡£¡£¡£¡
 		if (collision.gameObject.name == "Flowchart_111")
         {
 			GameManager.instance.isOver_111 = true;
@@ -183,6 +192,7 @@ public class PlayerController2D : MonoBehaviour
 		{
 			GameManager.instance.isOver_222 = true;
 		}
+
 
 
 

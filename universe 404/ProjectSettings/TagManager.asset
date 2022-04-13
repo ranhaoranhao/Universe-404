@@ -16,6 +16,9 @@ TagManager:
   - Checkpoint
   - disappear
   - Enemy
+  - computer
+  - headset
+  - Nike
   layers:
   - Default
   - TransparentFX

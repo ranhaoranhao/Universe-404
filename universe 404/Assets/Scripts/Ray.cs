@@ -5,7 +5,7 @@ using Fungus;
 
 public class Ray : MonoBehaviour
 {
-    public static Ray Instance;
+ 
     UnityEngine.Ray ray;
     RaycastHit hit;
     //
@@ -33,7 +33,7 @@ public class Ray : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canPick = true;
+      
        
     }
 
@@ -50,11 +50,11 @@ public class Ray : MonoBehaviour
             Debug.DrawLine(ray.origin, hit.point, Color.red);
             //
             //电脑
-            if(hit.transform.name == "computer" && canPick)
+            if(hit.transform.tag == "computer" && canPick)
             {
                 computeOutline.SetActive(true);
                 pickup.SetActive(true);
-                Debug.Log("666");
+
             }
             else
             {
@@ -62,7 +62,7 @@ public class Ray : MonoBehaviour
                 pickup.SetActive(false);
             }
             //耳机
-            if (hit.transform.name == "耳机" && canPick)
+            if (hit.transform.name == "haedset" && canPick)
             {
                 erjiOutline.SetActive(true);
                 pickup.SetActive(true);
@@ -74,7 +74,7 @@ public class Ray : MonoBehaviour
                 pickup.SetActive(false);
             }
             //气垫鞋
-            if (hit.transform.name == "耐克" && canPick)
+            if (hit.transform.name == "Nike" && canPick)
             {
                 nikeOutline.SetActive(true);
                 pickup.SetActive(true);
