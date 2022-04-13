@@ -140,9 +140,8 @@ public class GameManager : MonoBehaviour
         {
             Last2DPosition = Player.transform.position;
         }
-       
-        Ray.pos  = new Vector3(Screen.width / 2.0f, Screen.height / 2.0f);
-        Physics.Raycast(, out hit, 10.0f)
+
+         Ray.pos  = new Vector3(Screen.width / 2.0f, Screen.height / 2.0f);
         //物品收集
         if (Ray.isComputer)
         {
@@ -159,7 +158,7 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.Find("耐克"));
             PlayerController2D.m_JumpForce = 1000f;
         }
-
+      
 
 
 

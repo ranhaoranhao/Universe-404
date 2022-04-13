@@ -6,8 +6,8 @@ using Fungus;
 public class Ray : MonoBehaviour
 {
     public static Ray Instance;
-    static UnityEngine.Ray ray;
-    static RaycastHit hit;
+    UnityEngine.Ray ray;
+    RaycastHit hit;
     //
     public GameObject computeOutline;
     public GameObject erjiOutline;
@@ -40,11 +40,7 @@ public class Ray : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        RayItem();
-    }
-    public void RayItem()
-    {
-
+   
 
         //…˙≥……‰œﬂ
         ray = Camera.main.ScreenPointToRay(pos);
