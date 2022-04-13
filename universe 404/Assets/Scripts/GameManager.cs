@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject myCanvas;
     public GameObject Flowchart_Enter3D;
+    public GameObject BBGM;
    
     /// <summary>
     /// 3D 场景中，找到目标的时间限制
@@ -45,6 +46,11 @@ public class GameManager : MonoBehaviour
     public int ShardCount = 0;
 
     /// <summary>
+    /// 消耗的碎片数量
+    /// </summary>
+    public int SpendCount = 3;
+
+    /// <summary>
     /// 所有已经触发的对话
     /// </summary>
     public List<string> TriggeredFlowcharts;
@@ -60,11 +66,22 @@ public class GameManager : MonoBehaviour
     public bool isOver_start;
     public bool isOver_switch;
     public bool isOver_111;
+    public bool isOver_222;
+    public bool isOver_333;
+    public bool isOver_444;
+    public bool isOver_555;
+    public bool isOver_666;
+    public bool isOver_777;
 
     /// <summary>
     /// 拾取物体后的效果
     /// </summary>
     public bool canJump;
+    public bool canBBGM;
+
+
+
+
     public Flowchart flowchart_111;
     private void Start()
     {
@@ -88,6 +105,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(myCanvas);
         DontDestroyOnLoad(Flowchart_Enter3D);
+        DontDestroyOnLoad(BBGM);
 
 
 
@@ -104,6 +122,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         var scene_name = SceneManager.GetActiveScene().name;
         // 3D 场景下，30秒倒计时后激活传送对话
         if (!_transitionBegan && scene_name == "3D" )
@@ -121,13 +140,35 @@ public class GameManager : MonoBehaviour
         {
             Last2DPosition = Player.transform.position;
         }
+       
+        Ray.pos  = new Vector3(Screen.width / 2.0f, Screen.height / 2.0f);
+        Physics.Raycast(, out hit, 10.0f)
         //物品收集
         if (Ray.isComputer)
         {
             Destroy(GameObject.Find("computer"));
-            GameManager.instance.canJump = true;
+            canJump = true;
         }
-      
+        if (Ray.isErji)
+        {
+            Destroy(GameObject.Find("耳机"));
+            canBBGM = true;
+        }
+        if (Ray.isNike)
+        {
+            Destroy(GameObject.Find("耐克"));
+            PlayerController2D.m_JumpForce = 1000f;
+        }
+
+
+
+
+
+
+
+
+
+        _textShard.text = " " + ShardCount;
     } 
    
 
@@ -150,15 +191,13 @@ public class GameManager : MonoBehaviour
         var total = CollectedShards.Count;
 
         // 每 7 个碎片触发 Fungus 的对话和场景转换
-        if (total % 7 == 0)
-        {
-            FlowChartSwitch(total);
+        //if (total % 7 == 0)
+        //{
+            //FlowChartSwitch(total);
             //对话时角色无法行动
-            Player = GameObject.FindGameObjectWithTag("Player");
-            Player.GetComponent<PlayerMovement>().canMove = false;
-        }
-
-        _textShard.text = " " + ShardCount;
+            //Player = GameObject.FindGameObjectWithTag("Player");
+            //Player.GetComponent<PlayerMovement>().canMove = false;
+        //}
 
         FlowChartSwitch(CollectedShards.Count);
         
@@ -202,14 +241,19 @@ public class GameManager : MonoBehaviour
     }
   
 
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "2D")
         {
+            if (canBBGM)
+            {
+                GameObject.Find("Audio Source").GetComponent<AudioSource>().volume = 1;
+            }
+            
             // 2D 场景
             Player = GameObject.FindGameObjectWithTag("Player");
             _textShard = GameObject.Find("Text_Shard").GetComponent<Text>();
-
             // 还原碎片和对话进度
             foreach (Shard shard in FindObjectsOfType<Shard>())
             {
@@ -245,6 +289,10 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.Find("Flowchart_111").SetActive(false);
             }
+            if (isOver_222)
+            {
+                GameObject.Find("Flowchart_222").SetActive(false);
+            }
 
         } else if (scene.name == "3D")
         {
@@ -253,7 +301,7 @@ public class GameManager : MonoBehaviour
             _transitionBegan = false;
             _timeLeft = FindObjectTime;
             _textTimer = GameObject.Find("Text_TimeLeft").GetComponent<Text>();
-
+            ShardCount -= SpendCount;
             var image = GameObject.FindGameObjectWithTag("TargetCanvas").GetComponent<Image>();
             image.sprite = TargetImages[CollectedShards.Count / 7];
             //从2D来到3D时开启voluem；

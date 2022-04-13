@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PlayerController2D : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
+	public static  float  m_JumpForce = 800f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
@@ -174,13 +174,24 @@ public class PlayerController2D : MonoBehaviour
 		}
 
 		
-
+		//
 		if (collision.gameObject.name == "Flowchart_111")
         {
 			GameManager.instance.isOver_111 = true;
         }
+		if (collision.gameObject.name == "Flowchart_222")
+		{
+			GameManager.instance.isOver_222 = true;
+		}
 
-		if(collision.gameObject.name == "FallHit")
+
+
+
+
+
+
+
+		if (collision.gameObject.name == "FallHit")
         {
 			isFall = true;
 			anim_Fall.SetBool("canFall", true);

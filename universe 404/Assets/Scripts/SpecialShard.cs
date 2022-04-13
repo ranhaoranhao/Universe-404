@@ -20,6 +20,7 @@ public class SpecialShard : MonoBehaviour
         if (collision.gameObject.tag  == "Player")
         {
             Destroy(gameObject);
+            GameManager.instance.ShardCount += 1;
         }
     }
 }
