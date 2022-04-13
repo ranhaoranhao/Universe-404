@@ -107,9 +107,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(Flowchart_Enter3D);
         DontDestroyOnLoad(BBGM);
 
-
-
-
         SceneManager.sceneLoaded += OnSceneLoaded;
         // SceneManager.sceneUnloaded += OnSceneUnloaded;
         BlockSignals.OnBlockEnd += OnBlockEnd;
@@ -158,14 +155,6 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.Find("耐克"));
             PlayerController2D.m_JumpForce = 1000f;
         }
-      
-
-
-
-
-
-
-
 
         _textShard.text = " " + ShardCount;
     } 
@@ -223,6 +212,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Reload()
     {
+        // 不使用上次位置而返回检查点
+        Last2DPosition = Vector3.zero;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

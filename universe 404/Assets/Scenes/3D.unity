@@ -5195,7 +5195,7 @@ GameObject:
   - component: {fileID: 802993611}
   - component: {fileID: 802993610}
   m_Layer: 0
-  m_Name: outLIne
+  m_Name: nikeOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11833,7 +11833,7 @@ PrefabInstance:
     - target: {fileID: -5609321221556402741, guid: a55bb3704cdb3754c9861ef27ba06a5b,
         type: 3}
       propertyPath: m_Name
-      value: "\u8033\u673Aoutline"
+      value: headphonesOutline
       objectReference: {fileID: 0}
     - target: {fileID: -5609321221556402741, guid: a55bb3704cdb3754c9861ef27ba06a5b,
         type: 3}
