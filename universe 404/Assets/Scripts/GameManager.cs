@@ -107,9 +107,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(Flowchart_Enter3D);
         DontDestroyOnLoad(BBGM);
 
-
-
-
         SceneManager.sceneLoaded += OnSceneLoaded;
         // SceneManager.sceneUnloaded += OnSceneUnloaded;
         BlockSignals.OnBlockEnd += OnBlockEnd;
@@ -141,6 +138,7 @@ public class GameManager : MonoBehaviour
             Last2DPosition = Player.transform.position;
         }
 
+        /*
          Ray.pos  = new Vector3(Screen.width / 2.0f, Screen.height / 2.0f);
         //物品收集
         if (Ray.isComputer)
@@ -158,17 +156,42 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.Find("耐克"));
             PlayerController2D.m_JumpForce = 1000f;
         }
-      
-
-
-
-
-
-
-
+        */
 
         _textShard.text = " " + ShardCount;
     } 
+
+    /// <summary>
+    /// 收集 3D 物品后激活对应能力
+    /// </summary>
+    /// <param name="tag_name"></param>
+    public bool ActivateAbility(Transform obj)
+    {
+        var tag_name = obj.tag;
+        var picked = false;
+        if (tag_name == "computer")
+        {
+            picked = true;
+            canJump = true;
+        }
+        if (tag_name == "headset")
+        {
+            picked = true;
+            canBBGM = true;
+        }
+        if (tag_name == "Nike")
+        {
+            picked = true;
+            PlayerController2D.m_JumpForce = 1000f;
+        }
+
+        if (picked)
+        {
+            obj.gameObject.SetActive(false);
+        }
+
+        return picked;
+    }
    
 
     /// <summary>
@@ -223,6 +246,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Reload()
     {
+        // 不使用上次位置而返回检查点
+        Last2DPosition = Vector3.zero;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -245,14 +270,15 @@ public class GameManager : MonoBehaviour
     {
         if (scene.name == "2D")
         {
+            // 2D 场景
+            Player = GameObject.FindGameObjectWithTag("Player");
+            _textShard = GameObject.Find("Text_Shard").GetComponent<Text>();
+
             if (canBBGM)
             {
                 GameObject.Find("Audio Source").GetComponent<AudioSource>().volume = 1;
             }
-            
-            // 2D 场景
-            Player = GameObject.FindGameObjectWithTag("Player");
-            _textShard = GameObject.Find("Text_Shard").GetComponent<Text>();
+
             // 还原碎片和对话进度
             foreach (Shard shard in FindObjectsOfType<Shard>())
             {

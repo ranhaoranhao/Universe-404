@@ -630,7 +630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bada36335ef107b45bba56740f07f33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
   computeOutline: {fileID: 663817951}
   erjiOutline: {fileID: 1167287154}
   nikeOutline: {fileID: 802993608}
@@ -2067,6 +2066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5609321221556402741, guid: a55bb3704cdb3754c9861ef27ba06a5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: headset
       objectReference: {fileID: 0}
     - target: {fileID: 5146681718063874739, guid: a55bb3704cdb3754c9861ef27ba06a5b,
         type: 3}
@@ -5191,7 +5195,7 @@ GameObject:
   - component: {fileID: 802993611}
   - component: {fileID: 802993610}
   m_Layer: 0
-  m_Name: outLIne
+  m_Name: nikeOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7852,6 +7856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u8010\u514B"
       objectReference: {fileID: 0}
+    - target: {fileID: -5609321221556402741, guid: c59b4ce2dc3214240a31785f8b563d0e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Nike
+      objectReference: {fileID: 0}
     - target: {fileID: 5146681718063874739, guid: c59b4ce2dc3214240a31785f8b563d0e,
         type: 3}
       propertyPath: m_RootOrder
@@ -8127,6 +8136,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453084650579209848, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 937451010987979973, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8270,7 +8284,7 @@ PrefabInstance:
     - target: {fileID: 7094977340588366727, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
         type: 3}
       propertyPath: m_Name
-      value: NestedParent_Unpack
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7400677500434752734, guid: 035bf1ba97d19214580cfe6f5a29fdc3,
         type: 3}
@@ -10134,7 +10148,7 @@ GameObject:
   - component: {fileID: 1716374977}
   m_Layer: 0
   m_Name: computer
-  m_TagString: Untagged
+  m_TagString: computer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11819,7 +11833,7 @@ PrefabInstance:
     - target: {fileID: -5609321221556402741, guid: a55bb3704cdb3754c9861ef27ba06a5b,
         type: 3}
       propertyPath: m_Name
-      value: "\u8033\u673Aoutline"
+      value: headphonesOutline
       objectReference: {fileID: 0}
     - target: {fileID: -5609321221556402741, guid: a55bb3704cdb3754c9861ef27ba06a5b,
         type: 3}
